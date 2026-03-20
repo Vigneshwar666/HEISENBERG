@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Gwen 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url("https://images.unsplash.com/photo-1543466835-00a7907e9de1") no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 50px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 25px #ffcc80; }
+        }
+
+        p {
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .message {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffe0b2;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ffcc80;
+            color: #333;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fff3e0;
+        }
+
+        .sunflower {
+            position: absolute;
+            font-size: 40px;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .sunflower:nth-child(1) { top: 10%; left: 5%; }
+        .sunflower:nth-child(2) { top: 20%; right: 10%; }
+        .sunflower:nth-child(3) { bottom: 15%; left: 15%; }
+        .sunflower:nth-child(4) { bottom: 10%; right: 5%; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .paw {
+            position: absolute;
+            font-size: 25px;
+            opacity: 0.8;
+            animation: walk 10s linear infinite;
+        }
+
+        @keyframes walk {
+            0% { transform: translate(-50px, 100vh); }
+            100% { transform: translate(100vw, -50px); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 🌻 Sunflowers -->
+<div class="sunflower">🌻</div>
+<div class="sunflower">🌻</div>
+<div class="sunflower">🌻</div>
+<div class="sunflower">🌻</div>
+
+<!-- 🐾 Paw prints -->
+<div class="paw">🐾</div>
+<div class="paw" style="animation-delay:2s;">🐾</div>
+<div class="paw" style="animation-delay:4s;">🐾</div>
+
+<div class="container">
+    <h1>🎂 Happy Birthday GWEN 🎂</h1>
+
+    <!-- ✅ Your message added here -->
+    <p class="message">
+        Happy Birthday, GWEN 🎂 <br>
+        Another year, another chance to chase your dreams and shine brighter than ever. 
+        Never stop being the incredible person you are 🌟
+    </p>
+
+    <button onclick="showMessage()">Click for Surprise 🎁</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("msg").innerHTML = 
+    "GWEN 🌻🐾 Keep shining and keep smiling always!";
+}
+</script>
+<script>
+function goToPage() {
+    window.location.href = "wishes.html";
+}
+</script>
+</body>
+
+</body>
+</html>
